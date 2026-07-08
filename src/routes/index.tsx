@@ -306,7 +306,7 @@ function Hero({ particles }: { particles: { id: number; left: number; size: numb
         ))}
       </div>
 
-      <div className="relative mx-auto max-w-[1200px] px-6 lg:px-10 py-32 text-center">
+      <div className="relative z-10 mx-auto max-w-[1200px] px-6 lg:px-10 py-32 text-center">
         <p className="label-caps text-gold animate-fade-up">By Order of the Shelby Family</p>
         <div className="mt-6 hairline w-24 mx-auto" />
         <h1 className="mt-8 font-display font-bold leading-[0.95] tracking-tight animate-fade-up" style={{ animationDelay: "0.1s" }}>
