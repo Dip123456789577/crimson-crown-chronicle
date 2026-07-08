@@ -283,8 +283,9 @@ function Hero({ particles }: { particles: { id: number; left: number; size: numb
           height={1088}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_10%,var(--background)_95%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/40 to-background" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,var(--background))]" style={{ mixBlendMode: "multiply" }} />
+
       </div>
 
 
