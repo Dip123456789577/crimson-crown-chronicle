@@ -15,34 +15,96 @@ export const Route = createFileRoute("/")({
 });
 
 const NAV = [
-  ["home", "Home"], ["story", "Story"], ["characters", "Characters"],
-  ["seasons", "Seasons"], ["trailer", "Trailer"], ["gallery", "Gallery"],
-  ["ratings", "Ratings"], ["reviews", "Reviews"], ["awards", "Awards"],
-  ["timeline", "Timeline"], ["faq", "FAQ"], ["contact", "Contact"],
+  ["home", "Home"],
+  ["story", "Story"],
+  ["characters", "Characters"],
+  ["seasons", "Seasons"],
+  ["trailer", "Trailer"],
+  ["gallery", "Gallery"],
+  ["ratings", "Ratings"],
+  ["reviews", "Reviews"],
+  ["awards", "Awards"],
+  ["timeline", "Timeline"],
+  ["faq", "FAQ"],
+  ["contact", "Contact"],
 ] as const;
 
 const CHARACTERS = [
-  { img: char1, name: "Thomas Grey", actor: "Alexander Vance", role: "Head of the Family",
-    bio: "A decorated cavalryman turned businessman, Thomas returned from the trenches with a cold intellect and colder ambitions — dragging the family from the Small Heath backstreets to the boardrooms of London." },
-  { img: char2, name: "Elizabeth Grey", actor: "Cora Byrne", role: "The Matriarch",
-    bio: "Aunt, arbiter, and the true iron spine of the house. When the men lose their heads, Elizabeth keeps the ledger, the whiskey, and the peace." },
-  { img: char3, name: "Arthur Grey", actor: "Rufus Blackwood", role: "The Eldest",
-    bio: "Battle-scarred and quick to violence, Arthur is the family's fist. A soul carrying the smoke of the Somme, held together by bourbon and loyalty." },
-  { img: char4, name: "Lord Ashcroft", actor: "Julian Hollis", role: "The Rival",
-    bio: "An aristocrat with a manicured smile and a war chest of secrets. Where the Greys wield razors, he wields the state." },
+  {
+    img: char1,
+    name: "Commander Valerius Thorne",
+    actor: "Alexander Vance",
+    role: "The Abyssal Vanguard",
+    bio: "Once a surface naval commander, Valerius fell into the deep during the Great Collapse. Now he leads the Abyssal Vanguard with iron discipline, his eyes adapted to the crushing darkness of the ocean depths.",
+    demoReel: "https://www.youtube.com/embed/q3-eF74U8xQ?autoplay=1",
+  },
+  {
+    img: char2,
+    name: "Commander Seraphina Deep",
+    actor: "Cora Byrne",
+    role: "The Siren of Silence",
+    bio: "Master of acoustic warfare and deep-sea navigation, Seraphina commands the silent fleets that patrol the midnight zones. Her voice can shatter steel hulls or calm the most turbulent waters.",
+    demoReel: "https://www.youtube.com/embed/q3-eF74U8xQ?autoplay=1",
+  },
+  {
+    img: char3,
+    name: "Commander Marcus Steel",
+    actor: "Rufus Blackwood",
+    role: "The Iron Titan",
+    bio: "Enhanced with pressure-resistant cybernetics, Marcus survived pressures that would crush ordinary men. He now commands the heavy assault divisions, his body a living fortress of deep-sea engineering.",
+    demoReel: "https://www.youtube.com/embed/q3-eF74U8xQ?autoplay=1",
+  },
+  {
+    img: char4,
+    name: "Commander Lyra Void",
+    actor: "Julian Hollis",
+    role: "The Void Walker",
+    bio: "A brilliant scientist turned commander, Lyra discovered the ancient technologies buried beneath the ocean floor. She now leads the research and reconnaissance divisions, her mind as deep as the waters she explores.",
+    demoReel: "https://www.youtube.com/embed/q3-eF74U8xQ?autoplay=1",
+  },
 ];
 
 const SEASONS = [
-  { n: 1, year: 1919, eps: 6, title: "Small Heath Rising",
-    summary: "A stolen crate of machine guns lands the family in the crosshairs of Scotland Yard — and forces Thomas's hand." },
-  { n: 2, year: 1922, eps: 6, title: "London Calling",
-    summary: "Expansion south of the river brings new enemies, older betrayals, and the first taste of legitimate power." },
-  { n: 3, year: 1924, eps: 6, title: "The Russian Affair",
-    summary: "White émigrés, stolen jewels, and a Vatican priest — the Greys learn that empires demand a heavier price." },
-  { n: 4, year: 1926, eps: 6, title: "Blood on Snow",
-    summary: "A Sicilian vendetta arrives on Christmas Eve. The family must close ranks — or bury each other." },
-  { n: 5, year: 1929, eps: 6, title: "The Black Tide",
-    summary: "Fascism rises across Europe. Thomas steps into Parliament with a razor in his coat and a bullet with his name on it." },
+  {
+    n: 1,
+    year: 2147,
+    eps: 6,
+    title: "The Descent",
+    summary:
+      "Surface collapse forces humanity underwater. The Commanders establish the first abyssal settlements and discover they are not alone in the depths.",
+  },
+  {
+    n: 2,
+    year: 2151,
+    eps: 6,
+    title: "Ancient Awakenings",
+    summary:
+      "Deep-sea excavations uncover pre-human civilizations. The Commanders must defend against ancient horrors awakened from the ocean floor.",
+  },
+  {
+    n: 3,
+    year: 2155,
+    eps: 6,
+    title: "Pressure Rising",
+    summary:
+      "Rival factions emerge from the darkness. Internal divisions threaten to shatter the fragile alliance as resources dwindle.",
+  },
+  {
+    n: 4,
+    year: 2159,
+    eps: 6,
+    title: "The Void Beckons",
+    summary:
+      "A mysterious signal from the deepest trench promises salvation — or extinction. The Commanders must choose between survival and humanity.",
+  },
+  {
+    n: 5,
+    year: 2163,
+    eps: 6,
+    title: "Evolution's Edge",
+    summary:
+      "The final transformation begins. To save what remains, the Commanders must become something more than human — or less.",
+  },
 ];
 
 const RATINGS = [
@@ -53,14 +115,30 @@ const RATINGS = [
 ];
 
 const REVIEWS = [
-  { by: "The Guardian", role: "Critic", stars: 5,
-    text: "A stylistic masterwork — every frame a painting, every silence a threat. Television of the highest order." },
-  { by: "Empire Magazine", role: "Critic", stars: 5,
-    text: "Shelby & Co. rewrites the gangster saga with elegance, menace, and a soundtrack that hums like a loaded revolver." },
-  { by: "Marla D.", role: "Viewer", stars: 5,
-    text: "I've watched it four times. The costumes, the language, the cold-eyed loyalty — nothing else feels like this." },
-  { by: "Rolling Stone", role: "Critic", stars: 5,
-    text: "Operatic, brutal, tender. A period piece with the pulse of a modern thriller." },
+  {
+    by: "The Guardian",
+    role: "Critic",
+    stars: 5,
+    text: "A stylistic masterwork — every frame a painting, every silence a threat. Television of the highest order.",
+  },
+  {
+    by: "Empire Magazine",
+    role: "Critic",
+    stars: 5,
+    text: "Shelby & Co. rewrites the gangster saga with elegance, menace, and a soundtrack that hums like a loaded revolver.",
+  },
+  {
+    by: "Marla D.",
+    role: "Viewer",
+    stars: 5,
+    text: "I've watched it four times. The costumes, the language, the cold-eyed loyalty — nothing else feels like this.",
+  },
+  {
+    by: "Rolling Stone",
+    role: "Critic",
+    stars: 5,
+    text: "Operatic, brutal, tender. A period piece with the pulse of a modern thriller.",
+  },
 ];
 
 const AWARDS = [
@@ -72,26 +150,53 @@ const AWARDS = [
 ];
 
 const TIMELINE = [
-  { year: 1919, ev: "Thomas returns from France; the family business is reborn." },
-  { year: 1922, ev: "Shelby & Co. Ltd. is registered; the first legal betting license granted." },
-  { year: 1924, ev: "London expansion — Camden Town falls under Grey control." },
-  { year: 1926, ev: "General Strike; the family arms both sides and profits." },
-  { year: 1929, ev: "Thomas Grey elected Member of Parliament for Birmingham South." },
+  { year: 2147, ev: "The Great Collapse; surface world becomes uninhabitable. First underwater settlements established." },
+  { year: 2151, ev: "Discovery of ancient pre-human civilizations in the Mariana Trench." },
+  { year: 2155, ev: "The Commanders of the Deep unified under one banner; first major defense against abyssal horrors." },
+  { year: 2159, ev: "The Void Signal received from the deepest trench; expedition launched." },
+  { year: 2163, ev: "Evolution's Edge — the final transformation begins." },
 ];
 
 const BEHIND = [
-  { k: "Production", v: "Filmed on 35mm across Yorkshire, Liverpool and the Black Country. Practical sets, practical smoke, no CGI backdrops." },
-  { k: "Costume", v: "Over 4,000 hand-tailored garments — herringbone, tweed, silk crepe — sourced from period mills still in operation." },
-  { k: "Locations", v: "Stanley Mills, Bradford; the Black Country Living Museum; Arley Hall — each dressed to vanish into 1920s Birmingham." },
-  { k: "Direction", v: "Every frame is composed like a portrait: single light source, low key, gold rim. The camera never blinks first." },
+  {
+    k: "Production",
+    v: "Filmed with cutting-edge underwater cinematography technology. Practical sets built in massive water tanks, combined with seamless VFX for the abyssal environments.",
+  },
+  {
+    k: "Costume",
+    v: "Over 500 custom-designed pressure suits and enhancement interfaces. Each costume incorporates functional lighting and bioluminescent elements.",
+  },
+  {
+    k: "Locations",
+    v: "Deep-sea research facilities, underwater caves in Mexico, and massive tank stages. Each location enhanced to create the crushing atmosphere of the abyss.",
+  },
+  {
+    k: "Direction",
+    v: "Every frame composed to evoke the weight and mystery of the deep. Lighting designed to simulate bioluminescence and the crushing darkness of the ocean floor.",
+  },
 ];
 
 const FAQ = [
-  { q: "Is this an official production?", a: "No. This is a portfolio concept — a cinematic tribute site, independently designed and unaffiliated with any studio or network." },
-  { q: "When can I watch the series?", a: "The trailer above is a placeholder. This site is a design showcase; it doesn't stream episodes." },
-  { q: "Where was it filmed?", a: "Across the North of England, with primary shooting in Yorkshire, Liverpool and the Black Country Living Museum." },
-  { q: "Who composed the score?", a: "An original score of blues-inflected strings and industrial percussion, arranged for a live 42-piece ensemble." },
-  { q: "Will there be another season?", a: "Watch this space. When the Greys move, they move quietly — and all at once." },
+  {
+    q: "Is this an official production?",
+    a: "No. This is a portfolio concept — a cinematic tribute site showcasing original sci-fi storytelling, independently designed and unaffiliated with any studio or network.",
+  },
+  {
+    q: "When can I watch the series?",
+    a: "The trailer above is a concept demonstration. This site is a design showcase and portfolio piece presenting the world of Commanders of the Deep.",
+  },
+  {
+    q: "Where was the concept developed?",
+    a: "The visual design and storytelling were developed as a creative portfolio project, exploring themes of deep-sea survival and human evolution.",
+  },
+  {
+    q: "Who composed the score?",
+    a: "The soundtrack features atmospheric compositions blending industrial percussion with ethereal soundscapes, designed to evoke the crushing atmosphere of the abyss.",
+  },
+  {
+    q: "Will there be more content?",
+    a: "This is an ongoing creative project. The world of Commanders of the Deep continues to evolve with new character stories and narrative concepts.",
+  },
 ];
 
 function ShelbyPage() {
@@ -121,19 +226,23 @@ function ShelbyPage() {
   }, []);
 
   const [mounted, setMounted] = useState(false);
-  useEffect(() => { setMounted(true); }, []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const particles = useMemo(
-    () => mounted ? Array.from({ length: 28 }).map((_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      size: 2 + Math.random() * 4,
-      dur: 14 + Math.random() * 22,
-      delay: -Math.random() * 20,
-      opacity: 0.15 + Math.random() * 0.4,
-    })) : [],
+    () =>
+      mounted
+        ? Array.from({ length: 28 }).map((_, i) => ({
+            id: i,
+            left: Math.random() * 100,
+            size: 2 + Math.random() * 4,
+            dur: 14 + Math.random() * 22,
+            delay: -Math.random() * 20,
+            opacity: 0.15 + Math.random() * 0.4,
+          }))
+        : [],
     [mounted],
   );
-
 
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -147,7 +256,13 @@ function ShelbyPage() {
         }}
       />
 
-      <Nav active={active} menuOpen={menuOpen} setMenuOpen={setMenuOpen} muted={muted} setMuted={setMuted} />
+      <Nav
+        active={active}
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        muted={muted}
+        setMuted={setMuted}
+      />
 
       <main>
         <Hero particles={particles} />
@@ -161,7 +276,7 @@ function ShelbyPage() {
         <Awards />
         <Timeline />
         <Behind />
-        <Soundtrack />
+        <Soundtrack muted={muted} />
         <Faq faqOpen={faqOpen} setFaqOpen={setFaqOpen} />
         <Newsletter />
         <Contact />
@@ -174,10 +289,17 @@ function ShelbyPage() {
 
 /* -------------------- NAV -------------------- */
 function Nav({
-  active, menuOpen, setMenuOpen, muted, setMuted,
+  active,
+  menuOpen,
+  setMenuOpen,
+  muted,
+  setMuted,
 }: {
-  active: string; menuOpen: boolean; setMenuOpen: (b: boolean) => void;
-  muted: boolean; setMuted: (b: boolean) => void;
+  active: string;
+  menuOpen: boolean;
+  setMenuOpen: (b: boolean) => void;
+  muted: boolean;
+  setMuted: (b: boolean) => void;
 }) {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -198,8 +320,12 @@ function Nav({
           <a href="#home" className="group flex items-center gap-3">
             <RazorMark />
             <div className="leading-none">
-              <div className="font-display text-[1.35rem] gold-gradient-text tracking-tight">Shelby &amp; Co</div>
-              <div className="label-caps text-[0.55rem] mt-1 text-bronze">Birmingham · Est. 1919</div>
+              <div className="font-display text-[1.35rem] gold-gradient-text tracking-tight">
+                Commanders
+              </div>
+              <div className="label-caps text-[0.55rem] mt-1 text-bronze">
+                Of the Deep · Est. 2147
+              </div>
             </div>
           </a>
 
@@ -228,16 +354,24 @@ function Nav({
             >
               {muted ? <IconMute /> : <IconSound />}
             </button>
-            <a href="#contact" className="hidden md:inline-flex btn-gold">Join the Garrison</a>
+            <a href="#contact" className="hidden md:inline-flex btn-gold">
+              Join the Deep
+            </a>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Menu"
               className="xl:hidden h-10 w-10 flex items-center justify-center border border-bronze/60 text-gold"
             >
               <div className="flex flex-col gap-1.5">
-                <span className={`block h-px w-5 bg-current transition ${menuOpen ? "translate-y-1.5 rotate-45" : ""}`} />
-                <span className={`block h-px w-5 bg-current transition ${menuOpen ? "opacity-0" : ""}`} />
-                <span className={`block h-px w-5 bg-current transition ${menuOpen ? "-translate-y-1.5 -rotate-45" : ""}`} />
+                <span
+                  className={`block h-px w-5 bg-current transition ${menuOpen ? "translate-y-1.5 rotate-45" : ""}`}
+                />
+                <span
+                  className={`block h-px w-5 bg-current transition ${menuOpen ? "opacity-0" : ""}`}
+                />
+                <span
+                  className={`block h-px w-5 bg-current transition ${menuOpen ? "-translate-y-1.5 -rotate-45" : ""}`}
+                />
               </div>
             </button>
           </div>
@@ -250,7 +384,10 @@ function Nav({
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="absolute inset-0 bg-background/95 backdrop-blur-xl" onClick={() => setMenuOpen(false)} />
+        <div
+          className="absolute inset-0 bg-background/95 backdrop-blur-xl"
+          onClick={() => setMenuOpen(false)}
+        />
         <nav className="relative h-full flex flex-col items-center justify-center gap-4 px-6">
           {NAV.map(([id, label], i) => (
             <a
@@ -272,9 +409,23 @@ function Nav({
 }
 
 /* -------------------- HERO -------------------- */
-function Hero({ particles }: { particles: { id: number; left: number; size: number; dur: number; delay: number; opacity: number }[] }) {
+function Hero({
+  particles,
+}: {
+  particles: {
+    id: number;
+    left: number;
+    size: number;
+    dur: number;
+    delay: number;
+    opacity: number;
+  }[];
+}) {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       <div className="absolute inset-0 z-0">
         <img
           src={heroNoir}
@@ -285,10 +436,7 @@ function Hero({ particles }: { particles: { id: number; left: number; size: numb
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_center,transparent_0%,transparent_50%,var(--background)_120%)]" />
-
-
       </div>
-
 
       {/* Drifting particles */}
       <div aria-hidden className="absolute inset-0 z-[5] pointer-events-none">
@@ -309,19 +457,30 @@ function Hero({ particles }: { particles: { id: number; left: number; size: numb
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 lg:px-10 py-32 text-center">
-        <p className="label-caps text-gold animate-fade-up">By Order of the Shelby Family</p>
+        <p className="label-caps text-gold animate-fade-up">Commanders of the Deep</p>
         <div className="mt-6 hairline w-24 mx-auto" />
-        <h1 className="mt-8 font-display font-bold leading-[0.95] tracking-tight animate-fade-up" style={{ animationDelay: "0.1s" }}>
+        <h1
+          className="mt-8 font-display font-bold leading-[0.95] tracking-tight animate-fade-up"
+          style={{ animationDelay: "0.1s" }}
+        >
           <span className="block text-4xl sm:text-6xl md:text-7xl text-foreground/90">Shelby</span>
           <span className="block text-6xl sm:text-8xl md:text-[9rem] gold-gradient-text">
-            Company <span className="text-foreground/70 text-4xl sm:text-6xl md:text-7xl align-top">Ltd</span>
+            Company{" "}
+            <span className="text-foreground/70 text-4xl sm:text-6xl md:text-7xl align-top">
+              Ltd
+            </span>
           </span>
         </h1>
-        <p className="mt-8 max-w-2xl mx-auto text-base md:text-lg text-muted-foreground leading-relaxed animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          A cinematic descent into the smoke, gold and gunpowder of post-war Birmingham. Where family is
-          currency, silence is strategy, and the razor stitched in the cap is never for decoration.
+        <p
+          className="mt-8 max-w-2xl mx-auto text-base md:text-lg text-muted-foreground leading-relaxed animate-fade-up"
+          style={{ animationDelay: "0.2s" }}
+        >
+          A cinematic descent into the crushing depths of the abyss. Where humanity's last hope lies beneath the waves, enhanced by evolution and forged in darkness.
         </p>
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+        <div
+          className="mt-12 flex flex-wrap items-center justify-center gap-4 animate-fade-up"
+          style={{ animationDelay: "0.3s" }}
+        >
           <a href="#trailer" className="btn-gold group">
             <IconPlay /> Watch Trailer
           </a>
@@ -346,24 +505,19 @@ function Story() {
       <div className="grid lg:grid-cols-12 gap-10 items-start">
         <div className="lg:col-span-7 space-y-6 text-lg leading-relaxed text-foreground/80">
           <p className="first-letter:font-display first-letter:text-7xl first-letter:float-left first-letter:mr-3 first-letter:leading-[0.85] first-letter:gold-gradient-text">
-            Birmingham, 1919. The war is over — but not for the men who came home. In the soot-black
-            alleys of Small Heath, the Grey family runs the horses, the bookies, and quietly, the streets.
+            The year is 2147. The surface world has fallen to ecological collapse. Humanity's survivors retreat to the crushing depths of the ocean, building vast underwater cities in the abyssal zones.
           </p>
           <p>
-            Thomas Grey has plans bigger than the neighbourhood. Bigger than the city. Bigger than the crown
-            itself. What begins as a stolen crate of Lewis guns becomes an empire of legal betting, legitimate
-            distilleries — and, eventually, a seat in Parliament.
+            The Commanders of the Deep lead this new civilization — enhanced humans adapted to survive in the crushing darkness. They defend against ancient horrors awakened from the ocean floor and rival factions seeking control of the last resources.
           </p>
-          <p>
-            But every empire has a debt. And in Birmingham, the ledger is always paid in blood.
-          </p>
+          <p>In the depths, evolution is currency. Adaptation is strategy. And the pressure that would crush ordinary men only makes the Commanders stronger.</p>
         </div>
         <div className="lg:col-span-5 grid gap-4">
           {[
-            { k: "Era", v: "1919 — 1934" },
-            { k: "Setting", v: "Small Heath, Birmingham" },
-            { k: "Genre", v: "Period Crime · Drama" },
-            { k: "Family Rank", v: "Head · Consigliere · Enforcer · Matriarch" },
+            { k: "Era", v: "2147 — 2189" },
+            { k: "Setting", v: "Abyssal Zones · Pacific Trench" },
+            { k: "Genre", v: "Sci-Fi · Thriller · Drama" },
+            { k: "Command", v: "Vanguard · Siren · Titan · Void Walker" },
           ].map((r) => (
             <div key={r.k} className="rim-card p-6 grain-overlay">
               <div className="label-caps text-bronze mb-2">{r.k}</div>
@@ -378,36 +532,49 @@ function Story() {
 
 /* -------------------- CHARACTERS -------------------- */
 function Characters({
-  chars, openChar, setOpenChar,
+  chars,
+  openChar,
+  setOpenChar,
 }: {
   chars: typeof CHARACTERS;
   openChar: number | null;
   setOpenChar: (n: number | null) => void;
 }) {
+  const [playingDemoReel, setPlayingDemoReel] = useState<number | null>(null);
   return (
-    <Section id="characters" eyebrow="Chapter II" title="The Family">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <Section id="characters" eyebrow="Chapter II" title="Commanders of the Deep">
+      <div className="mb-12 text-center max-w-3xl mx-auto">
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          The elite commanders who lead humanity's last hope in the crushing depths. Enhanced, evolved, and forged in the abyss.
+        </p>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {chars.map((c, i) => (
           <button
             key={c.name}
             onClick={() => setOpenChar(i)}
-            className="group text-left rim-card overflow-hidden transition-transform duration-500 hover:-translate-y-1"
+            className="group text-left rim-card overflow-hidden transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(245,217,138,0.15)] cursor-pointer"
           >
             <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-transparent to-purple-950/30 z-10" />
               <img
                 src={c.img}
                 alt={c.name}
                 loading="lazy"
                 width={800}
                 height={1000}
-                className="w-full h-full object-cover grayscale-[0.35] transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:grayscale-0 grayscale-[0.25]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_50%_20%,var(--gold)/0.18,transparent_60%)]" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <div className="label-caps text-[0.6rem] text-gold">{c.role}</div>
-                <div className="font-display text-2xl mt-1 text-foreground">{c.name}</div>
-                <div className="text-xs text-muted-foreground mt-1">Played by {c.actor}</div>
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-20" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 bg-[radial-gradient(circle_at_50%_30%,var(--gold)/0.25,transparent_70%)]" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 z-30">
+                <div className="label-caps text-[0.65rem] text-gold mb-2 tracking-wider">{c.role}</div>
+                <div className="font-display text-2xl mt-1 text-foreground leading-tight">{c.name}</div>
+                <div className="text-xs text-muted-foreground mt-2">Portrayed by {c.actor}</div>
+                <div className="mt-4 flex items-center gap-2 text-gold/80 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <IconPlay /> View Character Reel
+                </div>
               </div>
             </div>
           </button>
@@ -417,31 +584,76 @@ function Characters({
       {/* Modal */}
       {openChar !== null && (
         <div
-          className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-10 bg-background/80 backdrop-blur-xl animate-fade-up"
+          className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-10 bg-background/90 backdrop-blur-xl animate-fade-up"
           onClick={() => setOpenChar(null)}
         >
           <div
-            className="relative max-w-4xl w-full rim-card grain-overlay grid md:grid-cols-2 gap-0 max-h-[85vh] overflow-hidden"
+            className="relative max-w-5xl w-full rim-card grain-overlay grid md:grid-cols-2 gap-0 max-h-[90vh] overflow-hidden shadow-[0_0_100px_rgba(245,217,138,0.2)]"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={chars[openChar].img}
-              alt={chars[openChar].name}
-              className="w-full h-64 md:h-full object-cover"
-            />
-            <div className="p-8 md:p-10 overflow-y-auto">
+            <div className="relative">
+              <img
+                src={chars[openChar].img}
+                alt={chars[openChar].name}
+                className="w-full h-64 md:h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            </div>
+            <div className="p-8 md:p-12 overflow-y-auto">
               <button
                 onClick={() => setOpenChar(null)}
-                className="absolute top-4 right-4 h-10 w-10 flex items-center justify-center text-gold border border-bronze/60 hover:bg-gold/10"
+                className="absolute top-4 right-4 h-10 w-10 flex items-center justify-center text-gold border border-bronze/60 hover:bg-gold/10 cursor-pointer z-10"
                 aria-label="Close"
               >
                 ✕
               </button>
-              <div className="label-caps text-gold">{chars[openChar].role}</div>
-              <h3 className="font-display text-4xl mt-3 gold-gradient-text">{chars[openChar].name}</h3>
-              <div className="text-sm text-muted-foreground mt-1">Portrayed by {chars[openChar].actor}</div>
-              <div className="hairline my-6" />
-              <p className="text-foreground/80 leading-relaxed">{chars[openChar].bio}</p>
+              <div className="label-caps text-gold tracking-wider">{chars[openChar].role}</div>
+              <h3 className="font-display text-4xl md:text-5xl mt-3 gold-gradient-text leading-tight">
+                {chars[openChar].name}
+              </h3>
+              <div className="text-sm text-muted-foreground mt-2">
+                Portrayed by {chars[openChar].actor}
+              </div>
+              <div className="hairline my-8" />
+              <p className="text-foreground/80 leading-relaxed text-lg">{chars[openChar].bio}</p>
+              <button
+                onClick={() => setPlayingDemoReel(openChar)}
+                className="mt-8 btn-gold flex items-center gap-3"
+              >
+                <IconPlay /> Watch Character Demo Reel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Character Demo Reel Modal */}
+      {playingDemoReel !== null && (
+        <div
+          className="fixed inset-0 z-[80] flex items-center justify-center p-4 md:p-10 bg-background/95 backdrop-blur-xl animate-fade-up"
+          onClick={() => setPlayingDemoReel(null)}
+        >
+          <div
+            className="relative max-w-5xl w-full aspect-video rim-card grain-overlay overflow-hidden shadow-[0_0_100px_rgba(245,217,138,0.3)]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setPlayingDemoReel(null)}
+              className="absolute top-4 right-4 z-50 h-12 w-12 flex items-center justify-center text-gold border border-bronze/60 hover:bg-gold/10 bg-background/80 cursor-pointer"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+            <iframe
+              src={chars[playingDemoReel].demoReel}
+              title={`${chars[playingDemoReel].name} Demo Reel`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full border-0"
+            />
+            <div className="absolute bottom-4 left-4 right-4 bg-background/90 backdrop-blur-md px-6 py-3 border border-bronze/40">
+              <div className="label-caps text-gold text-sm">{chars[playingDemoReel].name}</div>
+              <div className="text-xs text-muted-foreground mt-1">Character Demo Reel</div>
             </div>
           </div>
         </div>
@@ -451,13 +663,27 @@ function Characters({
 }
 
 /* -------------------- SEASONS -------------------- */
+const SEASON_VIDEOS: Record<number, string> = {
+  1: "q3-eF74U8xQ",
+  2: "q3-eF74U8xQ",
+  3: "q3-eF74U8xQ",
+  4: "q3-eF74U8xQ",
+  5: "q3-eF74U8xQ",
+};
+
 function Seasons({
-  seasons, openSeason, setOpenSeason,
+  seasons,
+  openSeason,
+  setOpenSeason,
 }: {
   seasons: typeof SEASONS;
   openSeason: number | null;
   setOpenSeason: (n: number | null) => void;
 }) {
+  const [playingEpisode, setPlayingEpisode] = useState<{ season: number; episode: number } | null>(
+    null,
+  );
+
   return (
     <Section id="seasons" eyebrow="Chapter III" title="Seasons & Episodes">
       <div className="space-y-3">
@@ -467,27 +693,41 @@ function Seasons({
             <div key={s.n} className="rim-card overflow-hidden">
               <button
                 onClick={() => setOpenSeason(open ? null : i)}
-                className="w-full flex items-center gap-6 p-6 text-left group"
+                className="w-full flex items-center gap-6 p-6 text-left group cursor-pointer"
               >
                 <div className="font-display text-5xl gold-gradient-text w-20 tabular-nums">
                   0{s.n}
                 </div>
                 <div className="flex-1">
-                  <div className="label-caps text-bronze">{s.year} · {s.eps} Episodes</div>
+                  <div className="label-caps text-bronze">
+                    {s.year} · {s.eps} Episodes
+                  </div>
                   <div className="font-display text-2xl mt-1">{s.title}</div>
                 </div>
-                <div className={`text-gold text-2xl transition-transform duration-500 ${open ? "rotate-45" : ""}`}>+</div>
+                <div
+                  className={`text-gold text-2xl transition-transform duration-500 ${open ? "rotate-45" : ""}`}
+                >
+                  +
+                </div>
               </button>
-              <div className={`grid transition-all duration-500 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
+              <div
+                className={`grid transition-all duration-500 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+              >
                 <div className="overflow-hidden">
                   <div className="px-6 pb-6 pt-0 ml-[104px]">
                     <p className="text-foreground/75 max-w-3xl">{s.summary}</p>
                     <div className="mt-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
                       {Array.from({ length: s.eps }).map((_, e) => (
-                        <div key={e} className="border border-bronze/40 px-3 py-2 flex items-center justify-between text-xs">
-                          <span className="label-caps text-bronze">Ep {String(e + 1).padStart(2, "0")}</span>
+                        <button
+                          key={e}
+                          onClick={() => setPlayingEpisode({ season: s.n, episode: e + 1 })}
+                          className="border border-bronze/40 px-3 py-2 flex items-center justify-between text-xs hover:bg-gold/10 text-left transition cursor-pointer text-foreground bg-transparent"
+                        >
+                          <span className="label-caps text-bronze">
+                            Ep {String(e + 1).padStart(2, "0")}
+                          </span>
                           <span className="text-gold">▶</span>
-                        </div>
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -497,6 +737,39 @@ function Seasons({
           );
         })}
       </div>
+
+      {/* Episode Preview Modal */}
+      {playingEpisode && (
+        <div
+          className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-10 bg-background/90 backdrop-blur-xl animate-fade-up"
+          onClick={() => setPlayingEpisode(null)}
+        >
+          <div
+            className="relative max-w-4xl w-full aspect-video rim-card grain-overlay overflow-hidden shadow-[0_0_80px_var(--gold)]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setPlayingEpisode(null)}
+              className="absolute top-4 right-4 z-50 h-10 w-10 flex items-center justify-center text-gold border border-bronze/60 hover:bg-gold/10 bg-background/80 cursor-pointer"
+              aria-label="Close"
+            >
+              ✕
+            </button>
+            <iframe
+              src={`https://www.youtube.com/embed/${SEASON_VIDEOS[playingEpisode.season]}?autoplay=1`}
+              title={`Season ${playingEpisode.season} Episode ${playingEpisode.episode} Preview`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full border-0"
+            />
+            <div className="absolute bottom-4 left-4 right-4 bg-background/80 backdrop-blur-md px-4 py-2 border border-bronze/40 text-xs">
+              <span className="label-caps text-gold">
+                Season {playingEpisode.season} · Episode {playingEpisode.episode} Preview
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </Section>
   );
 }
@@ -505,7 +778,7 @@ function Seasons({
 function Trailer() {
   const [playing, setPlaying] = useState(false);
   return (
-    <Section id="trailer" eyebrow="Chapter IV" title="The Trailer" center>
+    <Section id="trailer" title="The Trailer" center>
       <div className="relative mx-auto max-w-5xl">
         <div className="absolute -inset-12 bg-[radial-gradient(ellipse_at_center,var(--gold)/0.18,transparent_70%)] blur-2xl" />
         <div className="relative rim-card grain-overlay aspect-video overflow-hidden">
@@ -519,7 +792,7 @@ function Trailer() {
           {!playing ? (
             <button
               onClick={() => setPlaying(true)}
-              className="absolute inset-0 flex items-center justify-center group"
+              className="absolute inset-0 flex items-center justify-center group cursor-pointer"
               aria-label="Play trailer"
             >
               <span className="relative flex items-center justify-center h-24 w-24 rounded-full border border-gold/70 bg-background/40 backdrop-blur-md animate-pulse-gold transition-transform group-hover:scale-110">
@@ -528,14 +801,21 @@ function Trailer() {
               </span>
             </button>
           ) : (
-            <div className="absolute inset-0 flex items-center justify-center bg-background/80">
-              <div className="text-center px-6">
-                <div className="label-caps text-gold">Placeholder</div>
-                <p className="mt-3 text-muted-foreground max-w-md">
-                  Trailer video would embed here. This portfolio site does not ship copyrighted footage.
-                </p>
-                <button onClick={() => setPlaying(false)} className="btn-ghost mt-6">Close</button>
-              </div>
+            <div className="absolute inset-0 w-full h-full bg-black">
+              <iframe
+                src="https://www.youtube.com/embed/q3-eF74U8xQ?autoplay=1"
+                title="Official Trailer"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full border-0"
+              />
+              <button
+                onClick={() => setPlaying(false)}
+                className="absolute top-4 right-4 z-10 h-10 w-10 flex items-center justify-center text-gold border border-bronze/60 bg-background/80 hover:bg-gold/10 cursor-pointer"
+                aria-label="Close trailer"
+              >
+                ✕
+              </button>
             </div>
           )}
           <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-xs">
@@ -590,7 +870,11 @@ function Gallery() {
           className="fixed inset-0 z-[70] flex items-center justify-center p-6 bg-background/90 backdrop-blur-xl animate-fade-up"
           onClick={() => setLightbox(null)}
         >
-          <img src={lightbox} alt="" className="max-h-[85vh] max-w-full object-contain shadow-[0_0_80px_var(--gold)]" />
+          <img
+            src={lightbox}
+            alt=""
+            className="max-h-[85vh] max-w-full object-contain shadow-[0_0_80px_var(--gold)]"
+          />
           <button
             onClick={() => setLightbox(null)}
             className="absolute top-6 right-6 h-11 w-11 flex items-center justify-center text-gold border border-bronze/60"
@@ -621,20 +905,23 @@ function RatingCard({ label, score, fill, suffix }: (typeof RATINGS)[number]) {
   const [shown, setShown] = useState(0);
   useEffect(() => {
     if (!ref.current) return;
-    const io = new IntersectionObserver((ents) => {
-      if (ents[0].isIntersecting) {
-        let start = 0;
-        const target = score;
-        const t0 = performance.now();
-        const tick = (t: number) => {
-          const p = Math.min(1, (t - t0) / 1400);
-          setShown(start + (target - start) * (1 - Math.pow(1 - p, 3)));
-          if (p < 1) requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
-        io.disconnect();
-      }
-    }, { threshold: 0.4 });
+    const io = new IntersectionObserver(
+      (ents) => {
+        if (ents[0].isIntersecting) {
+          let start = 0;
+          const target = score;
+          const t0 = performance.now();
+          const tick = (t: number) => {
+            const p = Math.min(1, (t - t0) / 1400);
+            setShown(start + (target - start) * (1 - Math.pow(1 - p, 3)));
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.4 },
+    );
     io.observe(ref.current);
     return () => io.disconnect();
   }, [score]);
@@ -645,10 +932,23 @@ function RatingCard({ label, score, fill, suffix }: (typeof RATINGS)[number]) {
     <div ref={ref} className="rim-card grain-overlay p-6 flex flex-col items-center text-center">
       <div className="relative h-32 w-32">
         <svg viewBox="0 0 100 100" className="h-full w-full -rotate-90">
-          <circle cx="50" cy="50" r="46" fill="none" stroke="var(--bronze)" strokeOpacity="0.3" strokeWidth="2" />
           <circle
-            cx="50" cy="50" r="46" fill="none"
-            stroke="url(#gold-grad)" strokeWidth="2.5" strokeLinecap="round"
+            cx="50"
+            cy="50"
+            r="46"
+            fill="none"
+            stroke="var(--bronze)"
+            strokeOpacity="0.3"
+            strokeWidth="2"
+          />
+          <circle
+            cx="50"
+            cy="50"
+            r="46"
+            fill="none"
+            stroke="url(#gold-grad)"
+            strokeWidth="2.5"
+            strokeLinecap="round"
             strokeDasharray={`${dash} ${C}`}
             style={{ transition: "stroke-dasharray 1.4s cubic-bezier(0.2,0.7,0.2,1)" }}
           />
@@ -661,7 +961,8 @@ function RatingCard({ label, score, fill, suffix }: (typeof RATINGS)[number]) {
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="font-display text-3xl gold-gradient-text tabular-nums">
-            {shown.toFixed(suffix === "%" ? 0 : 1)}{suffix ?? ""}
+            {shown.toFixed(suffix === "%" ? 0 : 1)}
+            {suffix ?? ""}
           </div>
         </div>
       </div>
@@ -671,14 +972,22 @@ function RatingCard({ label, score, fill, suffix }: (typeof RATINGS)[number]) {
 }
 
 /* -------------------- REVIEWS -------------------- */
-function Reviews({ reviewIdx, setReviewIdx }: { reviewIdx: number; setReviewIdx: (n: number) => void }) {
+function Reviews({
+  reviewIdx,
+  setReviewIdx,
+}: {
+  reviewIdx: number;
+  setReviewIdx: (n: number) => void;
+}) {
   const r = REVIEWS[reviewIdx];
   return (
     <Section id="reviews" eyebrow="Chapter VII" title="What They Are Saying">
       <div className="max-w-4xl mx-auto">
         <div className="rim-card grain-overlay p-10 md:p-14 text-center">
           <div className="flex justify-center gap-1 text-gold">
-            {Array.from({ length: r.stars }).map((_, i) => <span key={i}>★</span>)}
+            {Array.from({ length: r.stars }).map((_, i) => (
+              <span key={i}>★</span>
+            ))}
           </div>
           <blockquote className="mt-8 font-display text-2xl md:text-3xl leading-snug text-foreground/90">
             “{r.text}”
@@ -692,7 +1001,9 @@ function Reviews({ reviewIdx, setReviewIdx }: { reviewIdx: number; setReviewIdx:
             onClick={() => setReviewIdx((reviewIdx - 1 + REVIEWS.length) % REVIEWS.length)}
             className="h-11 w-11 border border-bronze/60 text-gold hover:bg-gold/10 transition"
             aria-label="Previous review"
-          >‹</button>
+          >
+            ‹
+          </button>
           <div className="flex gap-2">
             {REVIEWS.map((_, i) => (
               <button
@@ -707,7 +1018,9 @@ function Reviews({ reviewIdx, setReviewIdx }: { reviewIdx: number; setReviewIdx:
             onClick={() => setReviewIdx((reviewIdx + 1) % REVIEWS.length)}
             className="h-11 w-11 border border-bronze/60 text-gold hover:bg-gold/10 transition"
             aria-label="Next review"
-          >›</button>
+          >
+            ›
+          </button>
         </div>
       </div>
     </Section>
@@ -721,9 +1034,15 @@ function Awards() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {AWARDS.map((a) => (
           <div key={a.title} className="rim-card p-6 flex items-start gap-5">
-            <div className="font-display text-4xl gold-gradient-text w-20 tabular-nums">{a.year}</div>
+            <div className="font-display text-4xl gold-gradient-text w-20 tabular-nums">
+              {a.year}
+            </div>
             <div className="flex-1">
-              <div className={`label-caps text-[0.6rem] ${a.tag === "Winner" ? "text-gold" : "text-bronze"}`}>{a.tag}</div>
+              <div
+                className={`label-caps text-[0.6rem] ${a.tag === "Winner" ? "text-gold" : "text-bronze"}`}
+              >
+                {a.tag}
+              </div>
               <div className="mt-2 text-foreground/90">{a.title}</div>
             </div>
             <div className="text-2xl text-gold/80">✦</div>
@@ -743,7 +1062,10 @@ function Timeline() {
         {TIMELINE.map((t, i) => {
           const left = i % 2 === 0;
           return (
-            <div key={t.year} className={`relative mb-10 md:grid md:grid-cols-2 md:gap-10 items-center ${left ? "" : "md:[direction:rtl]"}`}>
+            <div
+              key={t.year}
+              className={`relative mb-10 md:grid md:grid-cols-2 md:gap-10 items-center ${left ? "" : "md:[direction:rtl]"}`}
+            >
               <div className={`md:[direction:ltr] ${left ? "md:text-right md:pr-10" : "md:pl-10"}`}>
                 <div className="font-display text-3xl gold-gradient-text">{t.year}</div>
                 <p className="mt-2 text-foreground/80">{t.ev}</p>
@@ -764,7 +1086,10 @@ function Behind() {
     <Section id="behind" eyebrow="Chapter X" title="Behind the Scenes">
       <div className="grid md:grid-cols-2 gap-5">
         {BEHIND.map((b) => (
-          <div key={b.k} className="rim-card grain-overlay p-8 group transition-transform hover:-translate-y-1 duration-500">
+          <div
+            key={b.k}
+            className="rim-card grain-overlay p-8 group transition-transform hover:-translate-y-1 duration-500"
+          >
             <div className="label-caps text-gold">{b.k}</div>
             <div className="mt-4 hairline w-12" />
             <p className="mt-5 text-foreground/80 leading-relaxed">{b.v}</p>
@@ -776,14 +1101,87 @@ function Behind() {
 }
 
 /* -------------------- SOUNDTRACK -------------------- */
-function Soundtrack() {
+function Soundtrack({ muted }: { muted: boolean }) {
+  const [playingTrack, setPlayingTrack] = useState<string | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const tracks = [
+    {
+      n: "01",
+      t: "By Order of Peaky",
+      m: "Nick Cave & The Bad Seeds — 4:12",
+      url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    },
+    {
+      n: "02",
+      t: "Red Right Hand (Reprise)",
+      m: "The Ensemble — 3:48",
+      url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    },
+    {
+      n: "03",
+      t: "Coal & Cinder",
+      m: "Anna Calvi — 5:02",
+      url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    },
+    {
+      n: "04",
+      t: "Small Heath Sonata",
+      m: "Original Score — 6:20",
+      url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+    },
+    {
+      n: "05",
+      t: "The Iron Verdict",
+      m: "Original Score — 4:37",
+      url: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+    },
+  ];
+
+  const handlePlayTrack = (trackNo: string) => {
+    const track = tracks.find((tr) => tr.n === trackNo);
+    if (!track) return;
+
+    if (playingTrack === trackNo) {
+      audioRef.current?.pause();
+      setPlayingTrack(null);
+    } else {
+      setPlayingTrack(trackNo);
+      if (audioRef.current) {
+        audioRef.current.src = track.url;
+        audioRef.current.load();
+        audioRef.current.play().catch((err) => console.log("Audio play error: ", err));
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.muted = muted;
+    }
+  }, [muted]);
+
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+    };
+  }, []);
+
   return (
-    <Section id="soundtrack" eyebrow="Interlude" title="The Score">
+    <Section id="soundtrack" title="The Score">
       <div className="grid md:grid-cols-[auto_1fr] gap-10 items-center">
         <div className="relative mx-auto">
-          <div className="relative h-56 w-56 rounded-full bg-[radial-gradient(circle,var(--ink),#111_65%,#000)] shadow-[inset_0_0_40px_#000,0_20px_60px_rgba(0,0,0,0.7)] animate-spin-slow">
+          <div
+            className={`relative h-56 w-56 rounded-full bg-[radial-gradient(circle,var(--ink),#111_65%,#000)] shadow-[inset_0_0_40px_#000,0_20px_60px_rgba(0,0,0,0.7)] ${playingTrack ? "animate-spin-slow" : ""}`}
+          >
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="absolute inset-0 rounded-full border border-bronze/20" style={{ transform: `scale(${1 - i * 0.13})` }} />
+              <div
+                key={i}
+                className="absolute inset-0 rounded-full border border-bronze/20"
+                style={{ transform: `scale(${1 - i * 0.13})` }}
+              />
             ))}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="h-14 w-14 rounded-full bg-gradient-to-br from-gold to-bronze shadow-[0_0_30px_var(--gold)]" />
@@ -794,15 +1192,13 @@ function Soundtrack() {
         </div>
 
         <div>
+          <audio ref={audioRef} onEnded={() => setPlayingTrack(null)} className="hidden" />
           <ol className="space-y-3">
-            {[
-              ["01", "By Order of Peaky", "Nick Cave & The Bad Seeds — 4:12"],
-              ["02", "Red Right Hand (Reprise)", "The Ensemble — 3:48"],
-              ["03", "Coal & Cinder", "Anna Calvi — 5:02"],
-              ["04", "Small Heath Sonata", "Original Score — 6:20"],
-              ["05", "The Iron Verdict", "Original Score — 4:37"],
-            ].map(([n, t, m]) => (
-              <li key={n} className="group flex items-center gap-5 p-4 border-b border-border hover:bg-gold/[0.03] transition">
+            {tracks.map(({ n, t, m }) => (
+              <li
+                key={n}
+                className="group flex items-center gap-5 p-4 border-b border-border hover:bg-gold/[0.03] transition"
+              >
                 <span className="label-caps text-bronze w-8">{n}</span>
                 <div className="flex-1">
                   <div className="text-foreground/95">{t}</div>
@@ -812,12 +1208,18 @@ function Soundtrack() {
                   {[6, 12, 20, 14, 24, 10, 18, 8].map((h, i) => (
                     <span
                       key={i}
-                      className="w-[3px] bg-gold/60 animate-wave"
-                      style={{ height: h, animationDelay: `${i * 0.12}s` }}
+                      className={`w-[3px] bg-gold/60 ${playingTrack === n ? "animate-wave" : "h-1"}`}
+                      style={{ height: playingTrack === n ? h : 4, animationDelay: `${i * 0.12}s` }}
                     />
                   ))}
                 </div>
-                <button className="h-9 w-9 border border-bronze/60 text-gold group-hover:bg-gold/10 transition" aria-label="Play track">▶</button>
+                <button
+                  onClick={() => handlePlayTrack(n)}
+                  className="h-9 w-9 border border-bronze/60 text-gold hover:bg-gold/10 transition flex items-center justify-center font-sans text-sm cursor-pointer"
+                  aria-label={playingTrack === n ? "Pause track" : "Play track"}
+                >
+                  {playingTrack === n ? "⏸" : "▶"}
+                </button>
               </li>
             ))}
           </ol>
@@ -828,7 +1230,13 @@ function Soundtrack() {
 }
 
 /* -------------------- FAQ -------------------- */
-function Faq({ faqOpen, setFaqOpen }: { faqOpen: number | null; setFaqOpen: (n: number | null) => void }) {
+function Faq({
+  faqOpen,
+  setFaqOpen,
+}: {
+  faqOpen: number | null;
+  setFaqOpen: (n: number | null) => void;
+}) {
   return (
     <Section id="faq" eyebrow="Chapter XI" title="Frequently Asked">
       <div className="max-w-3xl mx-auto space-y-3">
@@ -841,9 +1249,15 @@ function Faq({ faqOpen, setFaqOpen }: { faqOpen: number | null; setFaqOpen: (n: 
                 className="w-full flex items-center justify-between gap-6 p-6 text-left"
               >
                 <span className="font-display text-lg md:text-xl">{f.q}</span>
-                <span className={`text-gold text-xl transition-transform duration-500 ${open ? "rotate-45" : ""}`}>+</span>
+                <span
+                  className={`text-gold text-xl transition-transform duration-500 ${open ? "rotate-45" : ""}`}
+                >
+                  +
+                </span>
               </button>
-              <div className={`grid transition-all duration-500 ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+              <div
+                className={`grid transition-all duration-500 ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+              >
                 <div className="overflow-hidden">
                   <p className="px-6 pb-6 text-foreground/75 leading-relaxed">{f.a}</p>
                 </div>
@@ -863,24 +1277,34 @@ function Newsletter() {
   const [err, setErr] = useState("");
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!/^\S+@\S+\.\S+$/.test(email)) { setErr("A proper address, if you please."); return; }
-    setErr(""); setSent(true);
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      setErr("A proper address, if you please.");
+      return;
+    }
+    setErr("");
+    setSent(true);
   };
   return (
     <section className="relative py-32">
       <div className="mx-auto max-w-3xl px-6 lg:px-10 text-center">
         <p className="label-caps text-gold">Dispatches</p>
-        <h2 className="mt-4 font-display text-4xl md:text-5xl">Join the Garrison</h2>
+        <h2 className="mt-4 font-display text-4xl md:text-5xl">Join the Deep</h2>
         <p className="mt-4 text-muted-foreground">
-          Occasional dispatches from Small Heath. No spam. No informers.
+          Occasional dispatches from the abyss. No spam. No surface signals.
         </p>
-        <form onSubmit={submit} className="mt-10 rim-card grain-overlay p-2 flex flex-col sm:flex-row gap-2">
+        <form
+          onSubmit={submit}
+          className="mt-10 rim-card grain-overlay p-2 flex flex-col sm:flex-row gap-2"
+        >
           <input
             type="email"
             required
             value={email}
-            onChange={(e) => { setEmail(e.target.value); setErr(""); }}
-            placeholder="your.name@birmingham.co.uk"
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setErr("");
+            }}
+            placeholder="your.name@abyssal.net"
             className="flex-1 bg-transparent px-5 py-4 outline-none placeholder:text-muted-foreground/60 text-foreground"
           />
           <button type="submit" className="btn-gold justify-center">
@@ -888,7 +1312,9 @@ function Newsletter() {
           </button>
         </form>
         {err && <p className="mt-3 text-sm text-destructive">{err}</p>}
-        {sent && <p className="mt-3 text-sm text-gold animate-fade-up">By order — you are on the list.</p>}
+        {sent && (
+          <p className="mt-3 text-sm text-gold animate-fade-up">By order of the Deep — you are on the list.</p>
+        )}
       </div>
     </section>
   );
@@ -900,9 +1326,9 @@ function Contact() {
     <Section id="contact" eyebrow="Chapter XII" title="Correspondence">
       <div className="grid md:grid-cols-3 gap-5">
         {[
-          { k: "Offices", v: "Watery Lane, Small Heath\nBirmingham, B10" },
-          { k: "Press", v: "press@shelbyandco.example\n+44 (0)121 000 0000" },
-          { k: "General", v: "hello@shelbyandco.example\nMon — Sat · 09:00 — 18:00" },
+          { k: "Command", v: "Abyssal Station Alpha\nMariana Trench, Pacific" },
+          { k: "Press", v: "press@commandersdeep.example\n+1 (555) 000-0000" },
+          { k: "General", v: "hello@commandersdeep.example\n24/7 · Deep Time" },
         ].map((c) => (
           <div key={c.k} className="rim-card grain-overlay p-8">
             <div className="label-caps text-gold">{c.k}</div>
@@ -925,18 +1351,22 @@ function Footer() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
             <RazorMark />
-            <div className="font-display text-2xl gold-gradient-text">Shelby &amp; Co</div>
+            <div className="font-display text-2xl gold-gradient-text">Commanders</div>
           </div>
           <p className="mt-5 text-sm text-muted-foreground max-w-sm leading-relaxed">
-            A cinematic portfolio concept inspired by the atmosphere of 1920s industrial Birmingham.
-            Not affiliated with any studio, network, or existing production.
+            A cinematic portfolio concept exploring humanity's future in the crushing depths.
+            Original sci-fi storytelling and visual design, independently created.
           </p>
         </div>
         <div>
           <div className="label-caps text-bronze mb-4">Navigate</div>
           <ul className="space-y-2 text-sm">
             {NAV.slice(1, 7).map(([id, l]) => (
-              <li key={id}><a href={`#${id}`} className="text-foreground/80 hover:text-gold transition">{l}</a></li>
+              <li key={id}>
+                <a href={`#${id}`} className="text-foreground/80 hover:text-gold transition">
+                  {l}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
@@ -944,7 +1374,11 @@ function Footer() {
           <div className="label-caps text-bronze mb-4">Follow</div>
           <ul className="space-y-2 text-sm">
             {["Instagram", "X / Twitter", "YouTube", "Letterboxd"].map((s) => (
-              <li key={s}><a href="#" className="text-foreground/80 hover:text-gold transition">{s}</a></li>
+              <li key={s}>
+                <a href="#" className="text-foreground/80 hover:text-gold transition">
+                  {s}
+                </a>
+              </li>
             ))}
           </ul>
         </div>
@@ -953,9 +1387,15 @@ function Footer() {
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} Shelby &amp; Co. · Portfolio Concept</div>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-gold">Privacy</a>
-            <a href="#" className="hover:text-gold">Terms</a>
-            <a href="#" className="hover:text-gold">Credits</a>
+            <a href="#" className="hover:text-gold">
+              Privacy
+            </a>
+            <a href="#" className="hover:text-gold">
+              Terms
+            </a>
+            <a href="#" className="hover:text-gold">
+              Credits
+            </a>
           </div>
         </div>
       </div>
@@ -965,15 +1405,23 @@ function Footer() {
 
 /* -------------------- PRIMITIVES -------------------- */
 function Section({
-  id, eyebrow, title, children, center,
+  id,
+  eyebrow,
+  title,
+  children,
+  center,
 }: {
-  id: string; eyebrow: string; title: string; children: React.ReactNode; center?: boolean;
+  id: string;
+  eyebrow?: string;
+  title: string;
+  children: React.ReactNode;
+  center?: boolean;
 }) {
   return (
     <section id={id} className="relative py-24 md:py-32 scroll-mt-24">
       <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
         <header className={`mb-14 ${center ? "text-center" : ""}`}>
-          <p className="label-caps text-gold">{eyebrow}</p>
+          {eyebrow && <p className="label-caps text-gold">{eyebrow}</p>}
           <h2 className="mt-4 font-display text-4xl md:text-6xl leading-[1.05]">{title}</h2>
           <div className={`mt-6 hairline w-24 ${center ? "mx-auto" : ""}`} />
         </header>
@@ -992,15 +1440,67 @@ function RazorMark() {
           <stop offset="1" stopColor="#8a6a2a" />
         </linearGradient>
       </defs>
-      <path d="M20 3 L34 12 L34 22 C34 30 27 35 20 37 C13 35 6 30 6 22 L6 12 Z"
-        fill="none" stroke="url(#rm)" strokeWidth="1.5" />
+      <path
+        d="M20 3 L34 12 L34 22 C34 30 27 35 20 37 C13 35 6 30 6 22 L6 12 Z"
+        fill="none"
+        stroke="url(#rm)"
+        strokeWidth="1.5"
+      />
       <path d="M14 14 L26 14 L23 22 L17 22 Z" fill="url(#rm)" opacity="0.9" />
       <circle cx="20" cy="27" r="1.5" fill="url(#rm)" />
     </svg>
   );
 }
-function IconPlay() { return <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor"><path d="M6 4l14 8-14 8z" /></svg>; }
-function IconPlayLarge() { return <svg viewBox="0 0 24 24" className="h-8 w-8 text-gold ml-1" fill="currentColor"><path d="M6 4l14 8-14 8z" /></svg>; }
-function IconArrow() { return <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 6l6 6-6 6" /></svg>; }
-function IconMute() { return <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 9v6h4l5 4V5L8 9H4zM17 9l4 6M21 9l-4 6" /></svg>; }
-function IconSound() { return <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 9v6h4l5 4V5L8 9H4zM17 8a5 5 0 010 8M20 5a9 9 0 010 14" /></svg>; }
+function IconPlay() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-3.5 w-3.5" fill="currentColor">
+      <path d="M6 4l14 8-14 8z" />
+    </svg>
+  );
+}
+function IconPlayLarge() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-8 w-8 text-gold ml-1" fill="currentColor">
+      <path d="M6 4l14 8-14 8z" />
+    </svg>
+  );
+}
+function IconArrow() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-3.5 w-3.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+function IconMute() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    >
+      <path d="M4 9v6h4l5 4V5L8 9H4zM17 9l4 6M21 9l-4 6" />
+    </svg>
+  );
+}
+function IconSound() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    >
+      <path d="M4 9v6h4l5 4V5L8 9H4zM17 8a5 5 0 010 8M20 5a9 9 0 010 14" />
+    </svg>
+  );
+}
