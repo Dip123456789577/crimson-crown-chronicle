@@ -4,5 +4,21 @@
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": null,
-  "name": "shelby-co"
+  "name": "shelby-co",
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
 }
