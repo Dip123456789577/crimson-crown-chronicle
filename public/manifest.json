@@ -1,0 +1,21 @@
+{
+  "name": "Shelby & Co",
+  "short_name": "Shelby & Co",
+  "description": "A cinematic tribute to the razor-sharp world of the Shelby family.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#8b7355",
+  "icons": [
+    {
+      "src": "/assets/gal-1.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/assets/gal-1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
